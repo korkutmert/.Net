@@ -1,0 +1,25 @@
+﻿@model List<BranchDto>
+
+<h1 class="display-6 text-danger">BRANŞLAR</h1>
+<hr>
+<a type="button" class="btn btn-info"
+asp-area="Admin"
+asp-controller="Branch"
+asp-action="CreateBranch"
+>Ders Ekle</a>
+
+
+    <div class="row">
+        @foreach (var item in Model)
+{
+    <div class="card m-2" style="width: 15rem;">
+        <img src="/Images/@item.ImageUrl" class="card-img-top" alt="resim">
+        <div class="card-body">
+            <p class="card-text text-center">@item.BranchName</p>
+        </div>
+        <div class="card-footer">
+                <a type="button" class="text-muted"> Ders verenler</a>
+        </div>
+    </div>
+}
+    </div>

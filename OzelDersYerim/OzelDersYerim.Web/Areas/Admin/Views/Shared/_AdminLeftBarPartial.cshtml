@@ -1,0 +1,30 @@
+
+<div class="mb-2 pt-2 text-center">
+    <a class="text-decoration-none" href="/" target="_blank">ÖzelDersYerim</a>
+</div>
+<hr />
+<div class="list-group">
+   
+    <a asp-area="Admin"
+       asp-controller="User"
+       asp-action="Index"
+       class="list-group-item list-group-item-action @(ViewBag.SelectedMenu=="User" ? "active" : "")">Kullanıcılar</a>
+
+     <a asp-area="Admin"
+       asp-controller="Branch"
+       asp-action="Index"
+       class="list-group-item list-group-item-action @(ViewBag.SelectedMenu=="Branch" ? "active" : "")">Branşlar</a>
+
+       <a asp-area="Admin"
+       asp-controller="Lesson"
+       asp-action="Index"
+       class="list-group-item list-group-item-action @(ViewBag.SelectedMenu=="Lesson" ? "active" : "")">Dersler</a>
+    <hr />
+    
+   
+    <a asp-area=""
+       asp-controller="Account"
+       asp-action="Logout"
+       class="list-group-item list-group-item-action">Çıkış Yap</a>
+
+</div>

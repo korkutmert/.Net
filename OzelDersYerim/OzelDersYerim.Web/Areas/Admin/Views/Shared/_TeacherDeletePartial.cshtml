@@ -1,0 +1,35 @@
+﻿@model TeacherListDto
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalUserDelete_@Model.Id">
+    Sil
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalUserDelete_@Model.Id" tabindex="-1" aria-labelledby="modalLabelUserDelete_@Model.Id" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelUserDelete_@Model.Id">Dikkat!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <strong>@Model.FirstName @Model.LastName</strong> adlı kullanıcıyı silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <a class="btn btn-primary"
+                   id="UserDeleteForm_@Model.Id"
+                   asp-area="Admin"
+                   asp-controller="Teacher"
+                   asp-action="Delete"
+                   asp-route-id="@Model.UserName">
+                    Evet
+                </a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+            </div>
+        </div>
+    </div>
+</div>
+

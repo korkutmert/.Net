@@ -1,0 +1,31 @@
+﻿@using OzelDersYerim.Web.Models.Dtos;
+@model TeacherDto
+
+    
+<div class="card" style="width:155px;"  >
+  <img  src="~/Images/@Model.ProfilePictureUrl" class="card-img-top">
+  <div class="card-body">
+        <h5 class="card-title text-center">@Model.FirstName @Model.LastName</h5>
+        <hr />
+        <p class="card-text">
+            <h6 class="text-center fst-italic ">Branşlar</h6>
+
+         @foreach (var item in Model.TeacherBranches)
+            {
+                <div>
+                    @item.Branch.BranchName
+
+                </div>
+            }
+            
+            <div class="card-footer">
+                <a class="text-decoration-none text-muted"
+                   asp-area=""
+                   asp-controller="Choose" 
+                   asp-action="TeacherDetails" 
+                   asp-route-teacherUrl=@Model.Url
+                   >Detaylar</a>
+            </div>
+         </p>
+  </div>
+</div>

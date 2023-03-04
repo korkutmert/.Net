@@ -1,0 +1,52 @@
+﻿@model List<TeacherLessonListDto>
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-outline-primary mb-3"
+           
+           asp-controller="TeacherLesson"
+           asp-action="GiveLesson"
+           asp-route-name="@User.Identity.Name"> Yeni İlan Oluştur</a>
+    </div>
+
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+           
+            <th>Kurs Adı</th>
+            <th>Açıklama</th>
+            <th>Saatlik Ücret</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var tl in Model)
+        {
+
+            <tr>
+                <td>@tl.Name</td>
+                <td>@tl.Description</td>
+                <td>@($"{tl.PricePerHour:C0}")</td>
+               
+                <td>
+
+                    <a class="btn btn-warning btn-sm"  
+                   asp-controller="TeacherLesson"
+                   asp-action="EditTeacherLesson"
+                   asp-route-id=@tl.Id>Düzenle</a>
+
+                 
+
+                     <a class="btn btn-danger btn-sm"
+                   asp-controller="TeacherLesson"
+                   asp-action="DeleteTeacherLesson"
+                asp-route-id=@tl.Id>Sil</a> 
+
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>

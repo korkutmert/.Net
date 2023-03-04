@@ -1,0 +1,58 @@
+
+@model List<TeacherLessonListDto>
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-outline-primary mb-3"
+           asp-area="Admin"
+           asp-controller="Lesson"
+           asp-action="CreateTeacherLesson"> Ekle</a>
+    </div>
+
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ders Id</th>
+             <th>Öğretmen Adı</th>
+            <th>Öğretmen Soyadı</th>
+            <th>Ders Adı</th>          
+            <th>Saatlik Ücret</th>
+            
+            
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var teacherLes in Model)
+        {
+
+            <tr>
+                <td>@teacherLes.Id</td>
+                <td>@teacherLes.TeacherFirstName</td>
+                <td>@teacherLes.TeacherLastName</td>
+                <td>@teacherLes.Name</td>
+                <td>@teacherLes.PricePerHour</td>
+                <td>
+
+                    <a class="btn btn-warning btn-sm"
+                   asp-area="Admin"
+                   asp-controller="Lesson"
+                   asp-action="EditTeacherLesson"
+                   asp-route-id=@teacherLes.Id>Düzenle</a>
+
+                        @* @await Html.PartialAsync("_StudentDeletePartial", student) *@
+
+                    <a class="btn btn-danger btn-sm"
+                   asp-area="Admin"
+                   asp-controller="Student"
+                   asp-action="DeleteTeacherLesson"
+                   asp-route-id=@teacherLes.BranchId>Sil</a>
+
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>

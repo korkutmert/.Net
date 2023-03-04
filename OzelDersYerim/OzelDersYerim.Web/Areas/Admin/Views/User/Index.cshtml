@@ -1,0 +1,38 @@
+@model UserDto
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr >
+            <th class="fs-4 fw-light text-danger">Roller</th>
+            <th class="fs-4 fw-light text-danger">Üye Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <a type="button" 
+                class="text-decoration-none btn btn-sm btn-outline-danger text-dark"
+                asp-area="Admin"
+                asp-controller="Student"
+                asp-action="Index"
+                >Öğrenciler</a>
+            </td>
+            <td>
+            @Model.StudentsCount
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a type="button"
+                   class="text-decoration-none btn btn-sm btn-outline-danger text-dark"
+                 asp-area="Admin"
+                asp-controller="Teacher"
+                asp-action="Index"
+                 >Öğretmenler</a>
+            </td>
+            <td>
+                @Model.TeachersCount
+            </td>
+        </tr>
+    </tbody>
+</table>

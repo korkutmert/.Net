@@ -1,0 +1,74 @@
+﻿@model StudentAddDto
+<h1 class="display-6 fw-bold">Yeni Öğrenci Ekle</h1>
+<hr />
+<form asp-area="Admin"
+      asp-controller="Student"
+      asp-action="CreateStudent"
+      method="post">
+    <div class="row">
+        <div class="col-8">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input class="form-control" asp-for="FirstName">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input class="form-control" asp-for="LastName">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input class="form-control" asp-for="UserName">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input class="form-control" asp-for="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="About" class="form-label"></label>
+                <input class="form-control" asp-for="About">
+                <span asp-validation-for="About" class="text-danger"></span>
+            </div>
+                  <div class="mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input class="form-control" asp-for="PhoneNumber">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+             <div class="mb-3">
+                  <select name="genderType" class="form-select">
+
+                        <option value="Man">Erkek</option>
+                        <option value="Woman">Kadın</option>
+                    </select>
+             </div>
+        @{
+            DateTime today = DateTime.Now;
+            int yearToday = today.Year;
+            int year = yearToday - 18;
+            int month = today.Month;
+            int day = today.Day;
+            DateTime minBirthOfDate = new DateTime(year, month, day);
+        } 
+        <div class="col-6 mb-3">
+             <label asp-for="DateOfBirth" class="form-label"></label>
+            <input 
+                type="date" 
+                class="form-control" 
+                asp-for="DateOfBirth"
+                min="1900-01-01"
+                max="@minBirthOfDate.ToString("yyyy-MM-dd")"
+            />
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span> 
+
+            <button type="submit" class="btn btn-primary mt-3" id="btn-save">Kaydet</button>
+            <a type="button" class="btn btn-light mt-3"
+               asp-area="Admin"
+               asp-controller="Student"
+               asp-action="Index">Vazgeç</a>
+        </div>
+
+    </div>
+</form>

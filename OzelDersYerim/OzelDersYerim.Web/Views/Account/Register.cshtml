@@ -1,0 +1,94 @@
+﻿@using OzelDersYerim.Web.Models.Dtos;
+@model RegisterDto
+
+<body  style="background-image:url(https://img.freepik.com/premium-vector/open-book-with-icon-doodles_38359-113.jpg?w=1000); background-repeat:no-repeat; background-position:center">
+<div class="container">
+    <div class="row text-center">
+        <div class="col-2">
+        </div>
+
+        <div class="col-8" style="margin-top:50px">
+                <h1 class="display-6 text-light">KAYIT OL</h1>
+            <hr class="text-light" />
+
+            <form asp-controller="Account" asp-action="Register" method="post">
+               
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group">
+                        <label class="mb-2 form-label text-light" action="form-label">Üyelik Tipi</label>
+                    <select name="optionType" class="form-select">
+
+                        <option selected value="StudentSelected">Öğrenci</option>
+                        <option value="TeacherSelected">Öğretmen</option>
+                    </select>
+                </div>
+                <div class="row containter">
+
+                    <div class="col-6">
+
+                        <div class="form-group">
+                            <label class="form-label text-light fs-5"></label>
+                            <input placeholder="Ad" class="form-control" asp-for="FirstName">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label  class="form-label text-light"></label>
+                            <input placeholder="E-Posta" class="form-control" asp-for="Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label  class="form-label text-light"></label>
+                            <input placeholder="Kullanıcı Adı" class="form-control" asp-for="UserName">
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <label class="mb-2 form-label text-light" action="form-label">Cinsiyet</label>
+                    <select name="genderType" class="form-select">
+
+                        <option value="Man">Erkek</option>
+                        <option value="Woman">Kadın</option>
+                    </select>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label  class="form-label text-light"></label>
+                            <input placeholder="Soyad" class="form-control" asp-for="LastName">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label  class="form-label text-light"></label>
+                            <input placeholder="Parola" class="form-control" asp-for="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label  class="form-label text-light"></label>
+                            <input placeholder="Parola (Tekrar)" class="form-control" asp-for="RePassword">
+                            <span asp-validation-for="RePassword" class="text-danger"></span>
+                        </div>   
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber" class="form-label text-light"></label>
+                            <input  class="form-control" asp-for="PhoneNumber">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                 
+
+                    </div>
+
+                </div>
+                
+               
+
+                <button type="submit" class="btn mt-3 btn-info">Kayıt Ol</button>
+                <a type="button" class="btn mt-3 btn-danger" asp-controller="Home" asp-action="Index">Vazgeç</a>
+            </form>
+
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+</body>

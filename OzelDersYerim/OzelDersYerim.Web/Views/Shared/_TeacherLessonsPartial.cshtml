@@ -1,0 +1,19 @@
+@model TeacherLessonListDto
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="~/Images/ODY.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text"> Açıklama : @Model.Description</p>
+                <p class="card-text"> Saatlik Ücret : @($"{Model.PricePerHour:C0}")</p>
+        <a type="button" class="card-footer text-decoration-none text-black"
+            asp-controller="Choose" asp-action="TeacherDetails" asp-route-teacherurl="@Model.Url"
+        >Öğretmen: @Model.TeacherFirstName @Model.TeacherLastName</a>
+        
+      </div>
+    </div>
+  </div>
+</div>

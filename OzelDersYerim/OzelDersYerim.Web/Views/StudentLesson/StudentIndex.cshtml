@@ -1,0 +1,27 @@
+@using OzelDersYerim.Web.Models.Dtos;
+@model List<TeacherLessonListDto>
+   <div class="row mt-3 mb-4">
+    
+     <div>
+         @await Component.InvokeAsync("Branches")
+     </div>     
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.IsInRole("Student"))
+    {
+        <div class="container">
+         <div class="col-12 mt-3">
+          <h1  class="display-6 text-center">Ders Veren Öğretmenler</h1>
+        @foreach (var les in Model)
+        {
+            @await Html.PartialAsync("_TeacherLessonsPartial", les)
+            
+        }
+      
+     
+    </div>
+     </div>
+
+    }
+}
+     </div> 

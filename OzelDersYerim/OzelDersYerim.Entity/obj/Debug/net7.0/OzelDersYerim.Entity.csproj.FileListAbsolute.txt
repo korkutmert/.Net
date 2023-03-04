@@ -1,0 +1,12 @@
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\bin\Debug\net7.0\OzelDersYerim.Entity.deps.json
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\bin\Debug\net7.0\OzelDersYerim.Entity.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\bin\Debug\net7.0\OzelDersYerim.Entity.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.AssemblyInfo.cs
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\refint\OzelDersYerim.Entity.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\OzelDersYerim.Entity.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Entity\obj\Debug\net7.0\ref\OzelDersYerim.Entity.dll

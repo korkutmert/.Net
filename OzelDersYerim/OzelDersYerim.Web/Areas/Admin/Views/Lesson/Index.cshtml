@@ -1,0 +1,38 @@
+@model AdminLessonDto
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr >
+            <th class="fs-4 fw-light text-danger">Roller</th>
+            <th class="fs-4 fw-light text-danger">Toplam Ders Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <a type="button" 
+                class="text-decoration-none btn btn-sm btn-outline-danger text-dark"
+                asp-area="Admin"
+                asp-controller="Lesson"
+                asp-action="StudentLesson"
+                >Öğrenciler</a>
+            </td>
+            <td>
+            @Model.StudentLessonCount
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a type="button"
+                   class="text-decoration-none btn btn-sm btn-outline-danger text-dark"
+                 asp-area="Admin"
+                asp-controller="Lesson"
+                asp-action="TeacherLesson"
+                 >Öğretmenler</a>
+            </td>
+            <td>
+                @Model.TeacherLessonCount
+            </td>
+        </tr>
+    </tbody>
+</table>

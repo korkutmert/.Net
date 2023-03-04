@@ -1,0 +1,25 @@
+﻿@using OzelDersYerim.Web.Models.Dtos;
+@model List<TeacherDto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="">
+    <div class="row">
+       
+            @foreach (var teacherDto in Model)
+            {
+
+                <div class="col-md-2">
+                    @await Html.PartialAsync("_TeacherPartial", teacherDto)
+                </div>
+            }
+       
+    </div>
+</div>
+
+ 
+
+

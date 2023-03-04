@@ -1,0 +1,51 @@
+﻿@using OzelDersYerim.Web.Models.Dtos;
+@model List<LessonDto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"></h1>   
+</div>
+
+@* <div class="mt-4 row">
+    <div class="col-3">
+
+        @* @await Component.InvokeAsync("Branches") *@
+
+
+ @*   </div>
+    <div class="col-9">
+        <div class="row">
+            @foreach (var teacherDto in Model)
+            {
+                <div class="col-md-4">
+                    @await Html.PartialAsync("_TeacherPartial", teacherDto)
+                </div>
+            }
+        </div>
+    </div>
+</div> *@
+<div class="row mt-3 mb-4">
+    
+     <div>
+         @await Component.InvokeAsync("Branches")
+     </div>     
+
+     <div class="container">
+         <div class="col-12 mt-3">
+          <h1  class="display-6 text-center">Yayında Olan Dersler</h1>
+        @foreach (var les in Model)
+        {
+
+            @await Html.PartialAsync("_LessonsPartial", les)
+            
+        }
+      
+     
+    </div>
+     </div>
+</div>
+
+
+

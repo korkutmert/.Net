@@ -1,0 +1,117 @@
+@model TeacherAddDto
+<h1 class="display-6 fw-bold">Yeni Öğretmen Ekle</h1>
+<hr />
+
+     @{
+            DateTime today = DateTime.Now;
+            int yearToday = today.Year;
+            int year = yearToday - 18;
+            int month = today.Month;
+            int day = today.Day;
+            DateTime minBirthOfDate = new DateTime(year, month, day);
+                     }
+
+<form 
+asp-area="Admin"
+asp-controller="Teacher"
+asp-action="CreateTeacher"
+    method="post">
+   <div class="row">
+        <div class="col-4">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input class="form-control" asp-for="FirstName">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+             <div class="mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input class="form-control" asp-for="UserName">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+             <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input class="form-control" asp-for="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>           
+            <div class="mb-3">
+                <label asp-for="PricePerHour" class="form-label"></label>
+                <input class="form-control" asp-for="PricePerHour">
+                <span asp-validation-for="PricePerHour" class="text-danger"></span>
+            </div>  
+            
+
+          <div class="mb-3">
+                <label asp-for="Gender" class="form-label"></label>
+                  <select name="genderType" class="form-select">
+
+                        <option value="Man">Erkek</option>
+                        <option value="Woman">Kadın</option>
+                    </select>
+          </div>
+                   
+        </div>
+        <div class="col-4">
+                <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input class="form-control" asp-for="LastName">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                 </div>
+                  <div class="mb-3">
+            <label asp-for="DateOfBirth" class="form-label"></label>
+            <input 
+                type="date" 
+                class="form-control" 
+                asp-for="DateOfBirth"
+                value="@(Model.DateOfBirth.ToString("yyyy-MM-dd")=="0001-01-01" ? minBirthOfDate.ToString("yyyy-MM-dd") : Model.DateOfBirth.ToString("yyyy-MM-dd"))"
+                min="1900-01-01"
+                max="@minBirthOfDate.ToString("yyyy-MM-dd")"
+            />
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+           </div>
+             
+              <div class="mb-3">
+                <label asp-for="Experience" class="form-label"></label>
+                <input class="form-control" asp-for="Experience">
+                <span asp-validation-for="Experience" class="text-danger"></span>
+            </div>  
+             <div class="mb-3">
+                <label asp-for="About" class="form-label"></label>
+                <input class="form-control" asp-for="About">
+                <span asp-validation-for="About" class="text-danger"></span>
+            </div>
+             <div class="mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input class="form-control" asp-for="PhoneNumber">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            
+        </div>
+            <div class="col-4">
+                <div class="mb-3">
+                <label class="form-label" asp-for="Branches"></label>
+                @foreach (var branch in Model.Branches)
+                {
+                    <div>
+                        <input type="checkbox"
+                           class="form-check-input"
+                           name="SelectedBranchIds"
+                           value="@branch.Id"
+                           @if (Model.SelectedBranchIds!=null)
+                           {
+                           @(Model.SelectedBranchIds.Any(sc=>sc==branch.Id) ? "checked" : "")
+                           }/>
+                        <label>@branch.BranchName</label>
+                    </div>  
+                }
+                <span asp-validation-for="SelectedBranchIds" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+           <div class="mt-4">
+                <button type="submit" class="btn btn-primary" id="btn-save">Ekle</button>
+            <a type="button" class="btn btn-light"
+               asp-area="Admin"
+               asp-controller="Teacher"
+               asp-action="Index">Vazgeç</a>
+            </div>
+</form>

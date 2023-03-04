@@ -1,0 +1,17 @@
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Business.deps.json
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Business.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Business.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Data.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Entity.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Data.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\bin\Debug\net7.0\OzelDersYerim.Entity.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.AssemblyInfo.cs
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.csproj.CopyComplete
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\refint\OzelDersYerim.Business.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\OzelDersYerim.Business.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Proje Yeni\OzelDersYerim\OzelDersYerim.Business\obj\Debug\net7.0\ref\OzelDersYerim.Business.dll

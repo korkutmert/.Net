@@ -1,0 +1,43 @@
+@model StudentDetailsDto
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title display-6 text-center">@Model.FirstName @Model.LastName</h1>@*AD SOYAD*@
+        <div class="row">
+            <div class="col-3 text-center">
+                <img src="~/images/@Model.ProfilePictureUrl">
+            </div>
+            <div class="col-6">             
+                <hr>
+                <h6 class="fst-italic text-danger">Almak İstediği Kurslar</h6>@*AKTİF VERDİĞİ KURSLAR*@
+                <div class="mb-3">
+                    @foreach (var lesson in Model.TeacherLessons)
+                    {
+                        <div class="justify-content-between">
+                            <div class="d-inline text-end">
+                                <a asp-controller="" asp-area="" class="text-decoration-none text-dark p-0 mb-3"><i class="fa-solid fa-pen"></i> @lesson.Lesson.Name</a>
+                            </div>
+                       </div>
+
+
+                    }
+                   
+                   
+                </div>
+                <hr>
+            </div>
+            <div class="col-3">
+                <h6 class="fst-italic fw-bold text-danger mb-3 ">Kişisel Bilgiler</h6>@*KİŞİSEL BİLGİLER*@
+                <div class="mb-3">
+                    <p><i class="fa-solid fa-phone"></i> @Model.PhoneNumber</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-envelope"></i> @Model.Email</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,59 @@
+﻿@model TeacherLessonListDto
+<h1 class="display-6 fw-bold">Düzenle</h1>
+<hr />
+
+<form asp-area="Admin"
+      asp-controller="TeacherLesson"
+      asp-action="EditTeacherLesson"
+      method="post">
+      <input type="hidden" name="TeacherId" value="@Model.TeacherId" />
+    <div class="row">
+        <div class="col-4">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <input class="form-control" asp-for="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label asp-for="PricePerHour" class="form-label"></label>
+                <input class="form-control" asp-for="PricePerHour">
+                <span asp-validation-for="PricePerHour" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label class="form-label" asp-for="Branches"></label>
+                @foreach (var branch in Model.Branches)
+                {
+                    <div>
+                        <input type="checkbox"
+                           class="form-check-input"
+                           name="SelectedBranchId"
+                           value="@branch.Id"
+                           @if (Model.SelectedBranchId!=0)
+                        {
+                            @(Model.SelectedBranchId==branch.Id ? "checked" : "")
+                        }/>
+                        <label>@branch.BranchName</label>
+                    </div>
+                }
+                <span asp-validation-for="SelectedBranchId" class="text-danger"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a type="button" class="btn btn-light"
+           asp-area="Admin"
+           asp-controller="TeacherLesson"
+           asp-action="TeacherIndex">Vazgeç</a>
+    </div>
+</form>

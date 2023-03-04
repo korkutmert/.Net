@@ -1,0 +1,32 @@
+@model List<StudentListDto>
+
+<div class="container-fluid">
+    <div class="row">
+       @foreach (var student in Model)
+    {
+        <div class="col-md-2">
+                <div class="card" style="width:155px;"  >
+                    <img  src="~/Images/@student.ProfilePictureUrl" class="card-img-top">
+                    <div class="card-body ">
+                         <h5 class="card-title text-center">@student.FirstName @student.LastName</h5>
+                         <hr />
+
+                        <div class="card-footer">
+                            <a class="text-decoration-none text-muted"
+                              asp-area=""
+                              asp-controller="Choose" 
+                              asp-action="StudentDetails" 
+                              asp-route-studentUrl=@student.Url
+                             >Detaylar</a>
+                         </div>
+
+                    </div>
+                </div>
+        </div>
+    }
+    </div>
+</div>
+
+
+
+

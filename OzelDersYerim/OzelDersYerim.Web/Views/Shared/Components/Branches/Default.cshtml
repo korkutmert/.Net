@@ -1,0 +1,37 @@
+﻿@using OzelDersYerim.Entity.Concrete;
+
+@model List<Branch>
+@* <div class="list-group">
+    <a class="list-group-item list-group-item-action @(ViewBag.SelectedBranch ==null ? "active" : "")"
+       asp-controller="Choose"
+       asp-action="TeacherList"
+       asp-route-branchurl="">Tümünü Göster</a>
+    @foreach (var branch in Model)
+    {
+        <a class="list-group-item list-group-item-action @(ViewBag.SelectedBranch==branch.Url ? "active" : "")"
+       asp-controller="Choose"
+       asp-action="TeacherList"
+       asp-route-branchurl=@branch.Url>@branch.BranchName</a>
+    }
+</div> *@
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+    
+    <div class="card m-2" style="width: 10rem;">
+        <img src="/Images/@item.ImageUrl" class="card-img-top" alt="resim">
+        <div class="card-body">
+            
+        </div>
+        <div class="card-footer text-center">
+               <a type="button" class="text-decoration-none text-danger fw-bold "
+                   asp-controller="Choose"
+                   asp-action="TeacherList" 
+                   asp-route-branchurl="@item.Url">@item.BranchName</a>
+        </div>
+    </div>
+    }
+</div>
+  

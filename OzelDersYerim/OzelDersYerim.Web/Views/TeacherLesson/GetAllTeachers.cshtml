@@ -1,0 +1,42 @@
+@model List<TeacherListDto>
+
+<div class="container-fluid">
+    <div class="row">
+       @foreach (var teacher in Model)
+{
+ <div class="col-md-2">
+      <div class="card" style="width:155px;"  >
+  <img  src="~/Images/@teacher.ProfilePictureUrl" class="card-img-top">
+  <div class="card-body">
+        <h5 class="card-title text-center">@teacher.FirstName @teacher.LastName</h5>
+        <hr />
+        <p class="card-text">
+            <h6 class="text-center fst-italic ">Branşlar</h6>
+
+         @foreach (var item in teacher.TeacherBranches)
+            {
+                <div>
+                    @item.Branch.BranchName
+
+                </div>
+            }
+            
+            <div class="card-footer">
+                <a class="text-decoration-none text-muted"
+                   asp-area=""
+                   asp-controller="Choose" 
+                   asp-action="TeacherDetails" 
+                   asp-route-teacherUrl=@teacher.Url
+                   >Detaylar</a>
+            </div>
+         </p>
+  </div>
+</div>
+ </div>
+}
+    </div>
+</div>
+
+
+
+

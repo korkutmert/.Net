@@ -1,0 +1,62 @@
+﻿@model TeacherDetailsDto
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title display-6 text-center">@Model.FirstName @Model.LastName</h1>@*AD SOYAD*@
+        <div class="row">
+            <div class="col-3 text-center">
+                <img src="~/images/@Model.ProfilePictureUrl">
+            </div>
+            <div class="col-6">
+                <h6 class="fst-italic text-danger">Branşlar</h6>@*BRANŞLAR*@
+                <div class="mb-3">
+                    @foreach (var branch in Model.TeacherBranches)
+                    {
+                        <div>
+                            <a tpye="button" asp-controller="Choose" asp-action="TeacherList" asp-route-branchurl="@branch.Branch.Url" class="text-decoration-none text-dark p-0 mb-3"><i class="fa-solid fa-book"></i> @branch.Branch.BranchName</a>
+                        </div>
+                    }
+                </div>
+                <hr>
+                <h6 class="fst-italic text-danger">Aktif Verdiği Kurslar</h6>@*AKTİF VERDİĞİ KURSLAR*@
+                <div class="mb-3">
+                    @foreach (var lesson in Model.TeacherLessons)
+                    {
+                        <div class="justify-content-between">
+                            <div class="d-inline text-end">
+                                <a asp-controller="" asp-area="" class="text-decoration-none text-dark p-0 mb-3"><i class="fa-solid fa-pen"></i> @lesson.Lesson.Name</a>
+                            </div>
+                       </div>
+
+
+                    }
+                   
+                   
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <h6 class="fst-italic text-danger">Hakkında</h6> @*HAKKINDA*@
+                    <p class="card-text"><i class="fa-solid fa-circle-info"></i> @Model.About</p>
+                </div>
+                <hr>
+                <div>
+                    <h6 class="fst-italic text-danger">Ortalama Saatlik Ücreti</h6>@*ORTALAMA SAATLİK ÜCRET*@
+                    <p class="card-text">@($"{Model.PricePerHour:C0}")</p>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <h6 class="fst-italic fw-bold text-danger mb-3 ">Kişisel Bilgiler</h6>@*KİŞİSEL BİLGİLER*@
+                <div class="mb-3">
+                    <p><i class="fa-solid fa-phone"></i> @Model.PhoneNumber</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-envelope"></i> @Model.Email</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

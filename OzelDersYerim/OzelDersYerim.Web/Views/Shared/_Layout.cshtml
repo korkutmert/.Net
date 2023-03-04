@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OzelDersYerim.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/OzelDersYerim.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ÖZELDERSYERİM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="dropdown text-light">
+                                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Seçenekler
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" 
+                                       asp-controller="TeacherLesson"
+                                       asp-action="GetAllTeachers" 
+                                    >Tüm Öğretmenler</a></li>
+                                    <li><a class="dropdown-item" 
+                                    asp-controller="StudentLesson"
+                                       asp-action="GetAllStudents"
+                                    >Tüm Öğrenciler</a></li>
+                                    <li><a class="dropdown-item" 
+                                    asp-controller="Choose"
+                                       asp-action="GetAllBranches"
+                                    >Tüm Branşlar</a></li>
+                                     
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
+                        </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                          @if (User.IsInRole("Teacher"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger "
+                               asp-controller="TeacherLesson"
+                               asp-action="TeacherIndex">Ders Almak isteyenler</a>
+                                </li>
+
+                                <li class="nav-item">
+                                   <a class="nav-link text-success "
+                               asp-controller="TeacherLesson"
+                               asp-action="GiveLesson"
+                               asp-route-name="@User.Identity.Name"
+                               >Ders Ver</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-success "
+                               asp-controller="TeacherLesson"
+                               asp-action="TeacherLessons"
+                               asp-route-userName="@User.Identity.Name"
+                               >Derslerim</a>
+                                </li>
+
+                              
+                            } 
+                             @if (User.IsInRole("Student"))
+                            {
+                                  <li class="nav-item">
+                                    <a class="nav-link text-danger "
+                               asp-controller="StudentLesson"
+                               asp-action="StudentIndex">Ders Verenler</a>
+                                </li>
+
+                                <li class="nav-item">
+                                   <a class="nav-link text-danger "
+                               asp-controller="StudentLesson"
+                               asp-action="TakeLesson"
+                               asp-route-name="@User.Identity.Name"
+                               >Ders Al</a>
+                                </li>
+                            }   
+                            <li class="nav-item">
+                                <a class="nav-link text-light fw-bolder"
+                               asp-controller="Account"
+                               asp-action="Manage"
+                               asp-route-name="@User.Identity.Name">@User.Identity.Name</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light fw-bolder"
+                               asp-controller="Account"
+                               asp-action="Logout">Çıkış Yap</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light fw-bolder"
+                               asp-controller="Account"
+                               asp-action="Register">Kayıt Ol</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light fw-bolder"
+                               asp-controller="Account"
+                               asp-action="Login">Giriş Yap</a>
+                            </li>
+                        }
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
