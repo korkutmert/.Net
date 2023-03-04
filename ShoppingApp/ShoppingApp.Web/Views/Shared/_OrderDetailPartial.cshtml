@@ -1,0 +1,52 @@
+﻿@model OrderListDto
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#orderDetailModal_@Model.OrderId">
+    Detay Göster
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="orderDetailModal_@Model.OrderId" tabindex="-1" aria-labelledby="orderDetailModalLabel_@Model.OrderId" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h1 class="modal-title fs-5" id="orderDetailModalLabel_@Model.OrderId">Sipariş Detayları</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col-6">
+                        Sipariş No:@Model.OrderNumber
+                    </div>
+                    <div class="col-3">
+                        Tarih: @Model.OrderDate.ToShortDateString()
+                    </div>
+                    <div class="col-3">
+                        Tutar: @($"{Model.TotalPrice():C0}")
+                    </div>
+                    @foreach (var item in Model.OrderListItems)
+                    {
+                        <div class="card align-items-center" style="width: 18rem; margin: 10px auto;">
+                            <img class="card-img-top" src="~/images/@item.ImageUrl" alt="Card image cap" style="width:150px;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fw-bolder">@item.ProductName</h5>
+                                <h6 class="card-text fw-bold">@($" Fiyat: {item.Price:C0}")</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item fw-bold">@($"{item.Quantity} Adet")</li>
+                                @{
+                                    decimal? total = item.Price * item.Quantity;
+                                }
+                                <li class="list-group-item fw-bold">@($"Tutar: {total}")</li>
+                            </ul>
+                        </div>
+
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>

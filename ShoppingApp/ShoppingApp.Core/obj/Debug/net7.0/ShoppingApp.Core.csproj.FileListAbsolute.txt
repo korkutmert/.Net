@@ -1,0 +1,24 @@
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\refint\ShoppingApp.Core.dll
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY(mert)\Hafta_12\26-12-2022\ShoppingApp.Core\obj\Debug\net7.0\ref\ShoppingApp.Core.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.deps.json
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfo.cs
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\refint\ShoppingApp.Core.dll
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\Dell\Desktop\YAZYAZ\NBUY\Hafta_13\_26-12-2022 - SqlLite bitiş\ShoppingApp.Core\obj\Debug\net7.0\ref\ShoppingApp.Core.dll
